@@ -1,0 +1,13 @@
+﻿body {
+}
+
+html, body { 
+    background: linear-gradient(45deg,#000000,#808080);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.content-ctn {
+    padding: 48px;
+}
