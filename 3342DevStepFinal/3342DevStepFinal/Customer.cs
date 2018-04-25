@@ -9,7 +9,7 @@ namespace _3342DevStepFinal
     {
         public string fullName { get; set; }
         public string address { get; set; }
-        public int ccNumber { get; set; }
+        public long ccNumber { get; set; }
         public string expire { get; set; }
 
         public int secureCode { get; set; }

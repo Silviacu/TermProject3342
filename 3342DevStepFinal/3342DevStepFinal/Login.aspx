@@ -42,7 +42,7 @@
                         <asp:Button ID="btnRegister" Text="Register" CssClass="btn btn-primary" runat="server" />
                     </div>
                     <div style="float:right">
-                        <asp:Button ID="btnLogin" Text="Login" CssClass="btn btn-primary" runat="server" />
+                        <asp:Button ID="btnLogin" Text="Login" CssClass="btn btn-primary" runat="server" OnClick="btnLogin_Click" />
                     </div>
                 </div>
             </div>
