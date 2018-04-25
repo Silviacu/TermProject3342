@@ -17,11 +17,42 @@
     <form id="form1" runat="server">
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Register</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <asp:Label ID="lblName" Text="Full Name:" ForeColor="Black" runat="server"></asp:Label>
+                        <asp:TextBox ID="txtName" ForeColor="Black" runat="server" Width="244px"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:Label ID="lblAddress" Text="Address:" ForeColor="Black" runat="server"></asp:Label>
+                        <asp:TextBox ID="txtAddress" ForeColor="Black" runat="server" Width="444px"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:Label ID="lblCCNum" Text="Credit Card Number:" ForeColor="Black" runat="server"></asp:Label>
+                        <asp:TextBox ID="txtCCNum" ForeColor="Black" runat="server" Width="221px"></asp:TextBox>
+                        <asp:Label ID="lblExpire" Text="Expiration Date:" ForeColor="Black" runat="server"></asp:Label>
+                        <asp:TextBox ID="txtExpire" ForeColor="Black" runat="server"></asp:TextBox>
+                        <asp:Label ID="lblSecure" Text="Security Code:" ForeColor="Black" runat="server"></asp:Label>
+                        <asp:TextBox ID="txtSecure" ForeColor="Black" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:Label ID="lblEmail" Text="Email:" ForeColor="Black" runat="server"></asp:Label>
+                        <asp:TextBox ID="txtEmail" ForeColor="Black" runat="server"></asp:TextBox>
+                        <asp:Label ID="lblPassword" Text="Password:" ForeColor="Black" runat="server"></asp:Label>
+                        <asp:TextBox ID="txtPassword" ForeColor="Black" runat="server"></asp:TextBox>
+                    </div>
+                    <div style="float:right">
+                        <asp:Button ID="btnRegister" Text="Register" CssClass="btn btn-primary" runat="server" OnClick="btnRegister_Click" />
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-2"></div>
     </div>
     </form>
     <!-- JQuery Code -->

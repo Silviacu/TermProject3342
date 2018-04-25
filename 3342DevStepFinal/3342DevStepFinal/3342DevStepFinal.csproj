@@ -107,6 +107,7 @@
     <Compile Include="CarRental.aspx.designer.cs">
       <DependentUpon>CarRental.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="Flight.aspx.cs">
       <DependentUpon>Flight.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

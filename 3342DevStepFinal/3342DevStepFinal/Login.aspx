@@ -27,11 +27,11 @@
                 <div class="panel-body">
                     <div class="form-group">
                         <asp:Label ID="lblEmail" ForeColor="Black" Font-Bold="true" Text="Email" runat="server"></asp:Label>
-                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" ForeColor="Black" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     <div class="form-group">
                         <asp:Label ID="lblPassword" ForeColor="Black" Font-Bold="true" Text="Password" runat="server"></asp:Label>
-                        <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txtPassword" ForeColor="Black" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     <div style="text-align:center">
                         <div class="checkbox">

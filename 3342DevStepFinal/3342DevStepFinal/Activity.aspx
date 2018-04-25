@@ -3,5 +3,4 @@
     <link href="css/Activity.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>You're a bitch and FortNite is trash</h1>
 </asp:Content>
