@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="_3342DevStepFinal.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="_3342DevStepFinal_Flights_AirService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://cis-iis2.temple.edu/Spring2018/CIS3342_tuf54356/TermProjectWS/AirService.asmx</Value>
+    </Setting>
+    <Setting Name="_3342DevStepFinal_Hotels_HotelService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://cis-iis2.temple.edu/Spring2018/CIS3342_tue92295/TermProjectWS/HotelService.asmx</Value>
+    </Setting>
+    <Setting Name="_3342DevStepFinal_Experiences_ActivitiesService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://cis-iis2.temple.edu/Spring2018/CIS3342_tug62391/TermProjectWS/ActivitiesService.asmx</Value>
+    </Setting>
+    <Setting Name="_3342DevStepFinal_Cars_CarService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://cis-iis2.temple.edu/Spring2018/CIS3342_tue59964/TermProjectWS/CarService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
