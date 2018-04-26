@@ -70,7 +70,6 @@ namespace _3342DevStepFinal
                 objCommand.Parameters.Add(inputExpire);
 
                 SqlParameter inputSecure = new SqlParameter("@secure", newUser.secureCode);
-                //inputSecure.Direction = ParameterDirection.Input;
                 objCommand.Parameters.Add(inputSecure);
 
                 SqlParameter inputEmail = new SqlParameter("@email", newUser.email);

@@ -25,7 +25,7 @@ namespace _3342DevStepFinal
 
         }
 
-        public string DecodePassword(string encodedPassword)
+        /*public string DecodePassword(string encodedPassword)
         {
             System.Text.UTF8Encoding encoder = new System.Text.UTF8Encoding();
             System.Text.Decoder decode = encoder.GetDecoder();
@@ -35,27 +35,69 @@ namespace _3342DevStepFinal
             decode.GetChars(decode_byte, 0, decode_byte.Length, decoded, 0);
             string password = new string(decoded);
             return password;
+        }*/
+
+        public static string EncodePassword(string password)
+        {
+            try
+            {
+                byte[] encData = new byte[password.Length];
+                encData = System.Text.Encoding.UTF8.GetBytes(password);
+                string encodedData = Convert.ToBase64String(encData);
+                return encodedData;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error encoding password." + ex.Message);
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            if (!txtEmail.Text.Equals("") && !txtPassword.Text.Equals(""))
+
+            Customer user = new Customer();
+
+            user.email = txtEmail.Text;
+            user.password = EncodePassword(txtPassword.Text);
+
+            objCommand.CommandType = CommandType.StoredProcedure;
+            objCommand.CommandText = "GetUserAccount";
+
+            SqlParameter userEmail = new SqlParameter("@Email", user.email);
+            objCommand.Parameters.Add(userEmail);
+
+            SqlParameter userPassword = new SqlParameter("@Password", user.password);
+            objCommand.Parameters.Add(userPassword);
+
+            DataSet myDS = objDB.GetDataSetUsingCmdObj(objCommand);
+
+            if(myDS.Tables[0].Rows.Count > 0)
             {
-                HttpCookie cookie = new HttpCookie("Vacation_Cookie");
-                cookie.Values["UserEmail"] = txtEmail.Text;
-                cookie.Expires = new DateTime(2030, 1, 1);
-                Response.Cookies.Add(cookie);
-
-                Customer user = new Customer();
-
-                user.email = txtEmail.Text;
-                user.password = DecodePassword(txtPassword.Text);
-
-                objCommand.CommandType = CommandType.StoredProcedure;
-                objCommand.CommandText = "GetUserAccount";
-
-                
+                if (!txtEmail.Text.Equals("") && !txtPassword.Text.Equals(""))
+                {
+                    if (chkRemember.Checked)
+                    {
+                        HttpCookie cookie = new HttpCookie("Vacation_Cookie");
+                        cookie.Values["UserEmail"] = txtEmail.Text;
+                        cookie.Expires = new DateTime(2030, 1, 1);
+                        Response.Cookies.Add(cookie);
+                        Response.Redirect("Home.aspx");
+                    }
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "Client Script", "alert('Please fill out all parts of the login!')", true);
+                }
             }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "Client Script", "alert('User does not exist!')", true);
+            }
+        }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Register.aspx");
         }
     }
 }
