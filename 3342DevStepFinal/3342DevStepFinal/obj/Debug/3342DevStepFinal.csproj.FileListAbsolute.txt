@@ -20,17 +20,17 @@ c:\users\triss\documents\visual studio 2015\Projects\3342DevStepFinal\3342DevSte
 c:\users\triss\documents\visual studio 2015\Projects\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.csprojResolveAssemblyReference.cache
 c:\users\triss\documents\visual studio 2015\Projects\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.dll
 c:\users\triss\documents\visual studio 2015\Projects\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.pdb
-C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\csc.exe
-C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\VBCSCompiler.exe
+C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\csc.exe
+C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\Microsoft.CSharp.Core.targets
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\System.Reflection.Metadata.dll
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\vbc.exe
-C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\VBCSCompiler.exe
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\3342DevStepFinal.dll.config
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\3342DevStepFinal.dll

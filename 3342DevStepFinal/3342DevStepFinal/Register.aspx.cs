@@ -58,19 +58,15 @@ namespace _3342DevStepFinal
                 objCommand.CommandText = "RegisterUser";
 
                 SqlParameter inputName = new SqlParameter("@name", txtName.Text);
-                inputName.Direction = ParameterDirection.Input;
                 objCommand.Parameters.Add(inputName);
 
                 SqlParameter inputAddress = new SqlParameter("@address", newUser.address);
-                //inputAddress.Direction = ParameterDirection.Input;
                 objCommand.Parameters.Add(inputAddress);
 
                 SqlParameter inputCC = new SqlParameter("@ccNum", newUser.ccNumber);
-                //inputCC.Direction = ParameterDirection.Input;
                 objCommand.Parameters.Add(inputCC);
 
                 SqlParameter inputExpire = new SqlParameter("@expire", newUser.expire);
-                //inputExpire.Direction = ParameterDirection.Input;
                 objCommand.Parameters.Add(inputExpire);
 
                 SqlParameter inputSecure = new SqlParameter("@secure", newUser.secureCode);
@@ -78,11 +74,9 @@ namespace _3342DevStepFinal
                 objCommand.Parameters.Add(inputSecure);
 
                 SqlParameter inputEmail = new SqlParameter("@email", newUser.email);
-                //inputEmail.Direction = ParameterDirection.Input;
                 objCommand.Parameters.Add(inputEmail);
 
                 SqlParameter inputPassword = new SqlParameter("@password", newUser.password);
-                //inputPassword.Direction = ParameterDirection.Input;
                 objCommand.Parameters.Add(inputPassword);
 
                 objDB.DoUpdateUsingCmdObj(objCommand);
