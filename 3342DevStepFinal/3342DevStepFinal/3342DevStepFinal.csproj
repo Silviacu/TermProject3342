@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ActivityControl.ascx" />
+    <Content Include="Cart.aspx" />
     <Content Include="css\Login.css" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
@@ -142,6 +143,13 @@
     </Compile>
     <Compile Include="CarRental.aspx.designer.cs">
       <DependentUpon>CarRental.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cart.cs" />
     <Compile Include="Customer.cs" />
