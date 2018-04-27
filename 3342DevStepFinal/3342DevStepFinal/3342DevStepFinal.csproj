@@ -143,6 +143,7 @@
     <Compile Include="CarRental.aspx.designer.cs">
       <DependentUpon>CarRental.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cart.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Flight.aspx.cs">
       <DependentUpon>Flight.aspx</DependentUpon>
@@ -192,6 +193,7 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="VacationItem.cs" />
     <Compile Include="Web References\Cars\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
