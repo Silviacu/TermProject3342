@@ -14,7 +14,6 @@ namespace _3342DevStepFinal
     {
         DBConnect objDB = new DBConnect();
         SqlCommand objCommand = new SqlCommand();
-        //If email == email and password == password
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack && Request.Cookies["Vacation_Cookie"] != null)
@@ -75,6 +74,7 @@ namespace _3342DevStepFinal
             {
                 if (!txtEmail.Text.Equals("") && !txtPassword.Text.Equals(""))
                 {
+                    Session["Email"] = txtEmail.Text;
                     if (chkRemember.Checked)
                     {
                         HttpCookie cookie = new HttpCookie("Vacation_Cookie");

@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ActivityControl.ascx" />
     <Content Include="css\Login.css" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
@@ -127,6 +128,13 @@
     </Compile>
     <Compile Include="Activity.aspx.designer.cs">
       <DependentUpon>Activity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActivityControl.ascx.cs">
+      <DependentUpon>ActivityControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActivityControl.ascx.designer.cs">
+      <DependentUpon>ActivityControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="CarRental.aspx.cs">
       <DependentUpon>CarRental.aspx</DependentUpon>
