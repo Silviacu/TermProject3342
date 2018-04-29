@@ -29,7 +29,40 @@ namespace _3342DevStepFinal
 
         protected void rptCars_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
+            int index = e.Item.ItemIndex;
 
+            Label carID = (Label)rptCars.Items[index].FindControl("lblCarID");
+            Label carMake = (Label)rptCars.Items[index].FindControl("lblMake");
+            Label carModel = (Label)rptCars.Items[index].FindControl("lblModel");
+            Label price = (Label)rptCars.Items[index].FindControl("lblPriceCar");
+            Label numDoor = (Label)rptCars.Items[index].FindControl("lblNumDoors");
+            Label eco = (Label)rptCars.Items[index].FindControl("lblEcoFriendly");
+            Label numPass = (Label)rptCars.Items[index].FindControl("lblNumberPass");
+            Label agencyID = (Label)rptCars.Items[index].FindControl("lblAgencyID");
+
+            Cars.Car rental = new Cars.Car();
+            rental.carID = int.Parse(carID.Text);
+            rental.make = carMake.Text;
+            rental.model = carModel.Text;
+            rental.price = int.Parse(price.Text);
+            rental.numDoors = int.Parse(numDoor.Text);
+            rental.eco = eco.Text;
+            rental.numPassenger = int.Parse(numPass.Text);
+            rental.agencyID = int.Parse(agencyID.Text);
+
+            UserVacation userVacation;
+            if (Session["UserVacation"] != null)
+            {
+                userVacation = (UserVacation)Session["UserVacation"];
+            }
+            else
+            {
+                userVacation = new UserVacation();
+            }
+
+            userVacation.car.Add(rental);
+            userVacation.carQuan.Add(1);
+            Session["UserVacation"] = userVacation;
         }
 
         protected void btnNext_Click(object sender, EventArgs e)

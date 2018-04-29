@@ -13,40 +13,40 @@ namespace _3342DevStepFinal {
     public partial class Cart {
         
         /// <summary>
-        /// gvCars control.
+        /// divCar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvCars;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCar;
         
         /// <summary>
-        /// gvFlights control.
+        /// divFlight control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvFlights;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divFlight;
         
         /// <summary>
-        /// gvHotels control.
+        /// divHotel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvHotels;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divHotel;
         
         /// <summary>
-        /// gvActivity control.
+        /// divActivity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvActivity;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divActivity;
         
         /// <summary>
         /// lblTotal control.

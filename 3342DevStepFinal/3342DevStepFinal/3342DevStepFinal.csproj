@@ -201,6 +201,7 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserVacation.cs" />
     <Compile Include="VacationItem.cs" />
     <Compile Include="Web References\Cars\Reference.cs">
       <AutoGen>True</AutoGen>

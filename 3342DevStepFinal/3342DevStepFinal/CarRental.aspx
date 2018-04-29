@@ -172,6 +172,8 @@
                                                 <asp:Label ID="lblNumberPass" ForeColor="Black" Text='<%# DataBinder.Eval(Container.DataItem, "Number_Passenger") %>' runat="server"></asp:Label><br />
                                             </p>
                                             <asp:Button ID="btnAddCart" Text="Add To Cart" CssClass="btn btn-default" runat="server" />
+                                            <asp:Label ID="lblCarID" Visible="false" Text='<%# DataBinder.Eval(Container.DataItem, "CarID") %>' runat="server"></asp:Label>
+                                            <asp:Label ID="lblAgencyID" Visible="false" Text='<%# DataBinder.Eval(Container.DataItem, "AgencyID") %>' runat="server"></asp:Label>
                                         </div>
                                     </div>
                                 </div>

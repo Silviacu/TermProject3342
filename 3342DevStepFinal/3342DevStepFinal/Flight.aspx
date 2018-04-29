@@ -125,13 +125,13 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><asp:Button ID="btnSearch" runat="server" Text="Search" style="width: 67px" OnClick="btnSearch_Click1"/></td>
+                    <td><asp:Button ID="btnSearch" runat="server" Text="Search" style="width: 67px" OnClick="btnSearch_Click"/></td>
                     <td><asp:Label ID="lblMessage" runat="server" style="color:red"></asp:Label></td>
                 </tr>
             </table>
             <hr />
 
-            <asp:GridView ID="gvFlightResults" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="gvFlightResults_SelectedIndexChanged">
+            <asp:GridView ID="gvFlightResults" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
                     <asp:BoundField DataField="FlightID" HeaderText="FlightID" />

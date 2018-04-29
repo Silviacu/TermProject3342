@@ -33,7 +33,7 @@ namespace _3342DevStepFinal
             DataSet dataflight = new DataSet();
 
             //Check how to reference AirCarrierID
-            dataflight = proxy.GetFlights(airCarrierID, departureState, arrivalCity, arrivalState);
+            //dataflight = proxy.GetFlights(airCarrierID, departureState, arrivalCity, arrivalState);
             gvFlightResults.DataSource = dataflight;
             gvFlightResults.DataBind();
         }
@@ -50,7 +50,7 @@ namespace _3342DevStepFinal
                     add.Description = "Air Carrier: " + gvFlightResults.Rows[i].Cells[2].Text +
                                         " Departure Time: " + gvFlightResults.Rows[i].Cells[3].Text;
 
-                    cart.AddtoCart(add);
+                    //cart.AddtoCart(add);
                     gvFlightResults.Visible = false;
                     lblMessage.Text = "Your flight has successfully been added to cart";
 

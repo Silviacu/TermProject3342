@@ -88,7 +88,7 @@
                                 <asp:Label ID="lblAgency" Text="Agencies:" ForeColor="Black" runat="server"></asp:Label>
                                 <asp:DropDownList ID="ddlAgencies" CssClass="form-control" runat="server"></asp:DropDownList>
                             </div>
-                            <asp:Button ID="btnAgencies" Text="Search" CssClass="btn btn-default" runat="server" />
+                            <asp:Button ID="btnAgencies" Text="Search" CssClass="btn btn-default" runat="server" OnClick="btnAgencies_Click" />
                         </div>
                         <div class="col-md-6">
                             <h3 style="color:black">Search by Criteria</h3>
@@ -120,10 +120,40 @@
                                     <asp:ListItem>400</asp:ListItem>
                                 </asp:DropDownList>
                             </div>
+                            <asp:Button ID="btnCriteria" Text="Search" CssClass="btn btn-default" runat="server" OnClick="btnCriteria_Click" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="divActivities" style="text-align:center" runat="server">
+            <div class="page-header">
+                <h3>Activities For You:</h3>
+            </div>
+            <div style="width:100%;text-align:center">
+                <div class="row">
+                    <asp:Repeater ID="rptActivities" runat="server" OnItemCommand="rptActivities_ItemCommand">
+                        <ItemTemplate>
+                            <div class="col-md-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <h5>
+                                            <asp:Label ID="lblActivityType" ForeColor="Black" Text='<%# DataBinder.Eval(Container.DataItem, "Activity_Type") %>' runat="server"></asp:Label>
+                                        </h5>
+                                        <p style="color:black">
+                                            Price: $
+                                            <asp:Label ID="lblPrice" ForeColor="Black" Text='<%# DataBinder.Eval(Container.DataItem, "Activity_Cost") %>' runat="server"></asp:Label>
+                                        </p>
+                                        <asp:Button ID="btnAddCart" Text="Add To Cart" CssClass="btn btn-default" runat="server" /> 
+                                    </div>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+            </div>
+            <asp:Button ID="btnSearchAgain" Text="Search Again" CssClass="btn btn-default" runat="server" OnClick="btnSearchAgain_Click" />
+        </div>
     </div>
+    <div class="col-md-2"></div>
 </div>
