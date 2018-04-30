@@ -77,14 +77,25 @@
                 </tr>
                 <tr>
                     <td><asp:Label ID="lblAdvanced" runat="server" Text="Advanced Search Options:" ></asp:Label></td>
+                    <td><asp:CheckBox ID="cbCoffee" runat="server" Text="Has Free Coffee" /></td>
+                    <td><asp:CheckBox ID="cbSmoking" runat="server" Text="Smoking" /></td>
+                    <td><asp:CheckBox ID="cbWifi" runat="server" Text="WiFi" /></td>
                     <td><asp:CheckBox ID="cbKitchen" runat="server" Text="Kitchen" /></td>
-                    <td><asp:CheckBox ID="cbWiFi" runat="server" Text="WiFi" /></td>
-                    <td><asp:CheckBox ID="cbCasino" runat="server" Text="Casino" /></td>
-                    <td><asp:CheckBox ID="cbBeachView" runat="server" Text="Beach View"/></td>
+                    <td><asp:CheckBox ID="cbBreakfast" runat="server" Text="Breakfast" /></td>
+                </tr>
+                <tr>
+                    <td>Size Bed:</td>
+                    <td>
+                        <asp:DropDownList ID="ddlBed" runat="server">
+                            <asp:ListItem>Twin</asp:ListItem>
+                            <asp:ListItem>Queen</asp:ListItem>
+                            <asp:ListItem>King</asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><asp:Button ID="btnSearch" runat="server" Text="Search for Hotels" onclick="btnSearch_Click"/></td>
+                    <td><asp:Button ID="btnSearch" runat="server" Text="Search for Hotels" OnClick="btnSearch_Click"/></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -122,37 +133,37 @@
     </div>
 
     <div>
-        <asp:GridView ID="gvRoomResults" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" GridLines="None" CellSpacing="1">
+        <asp:GridView ID="gvRoomResults" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal">
+            <AlternatingRowStyle BackColor="#F7F7F7" />
             <Columns>
                 <asp:BoundField DataField="HotelID" HeaderText="HotelID" />
                 <asp:BoundField DataField="RoomID" HeaderText="RoomID" />
                 <asp:BoundField DataField="CheckInDate" HeaderText="Check In Date" DataFormatString="{0:MMMM d, yyyy}" />
                 <asp:BoundField DataField="CheckOutDate" HeaderText="Check Out Date" DataFormatString="{0:MMMM d, yyyy}" />
                 <asp:BoundField DataField="NumberofBeds" HeaderText="Number of Beds" />
-                <asp:BoundField DataField="KitchenAvailable" HeaderText="Kitchen" />
-                <asp:BoundField DataField="FreeWifi" HeaderText="WiFi" />
-                <asp:BoundField DataField="CasinoAvailable" HeaderText="Casino" />
-                <asp:BoundField DataField="BeachView" HeaderText="Beach View" />
+                <asp:BoundField DataField="HasFreeCoffeeField" HeaderText="Free Coffee" />
+                <asp:BoundField DataField="IsSmokingAllowedField" HeaderText="Smoking Allowed" />
+                <asp:BoundField DataField="HasFreeWifiField" HeaderText="Free Wifi" />
+                <asp:BoundField DataField="BedSizeField" HeaderText="BedSize" />
+                <asp:BoundField DataField="HasKitchenField" HeaderText="Kitchen" />
+                <asp:BoundField DataField="FreeBreakfastField" HeaderText="Free Breakfast" />
                 <asp:BoundField DataField="Reserved" HeaderText="Reserved" />
                 <asp:BoundField DataField="CostPerNight" HeaderText="Price" DataFormatString="{0:C}" />
-<%--                <asp:ImageField DataImageUrlField="ImageURL" HeaderText="Image">
-                    <ControlStyle Height="80px" Width="120px" />
-                </asp:ImageField>--%>
                 <asp:TemplateField>
                     <ItemTemplate>
                         <asp:Button ID="btnAddToCart" runat="server" OnClick="btnAddToCart_Click" Text="Add to Cart" />
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
-            <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
-            <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
-            <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
-            <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
-            <SelectedRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
-            <SortedAscendingCellStyle BackColor="#F1F1F1" />
-            <SortedAscendingHeaderStyle BackColor="#594B9C" />
-            <SortedDescendingCellStyle BackColor="#CAC9C9" />
-            <SortedDescendingHeaderStyle BackColor="#33276A" />
+            <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+            <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
+            <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+            <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+            <SortedAscendingCellStyle BackColor="#F4F4FD" />
+            <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
+            <SortedDescendingCellStyle BackColor="#D8D8F0" />
+            <SortedDescendingHeaderStyle BackColor="#3E3277" />
         </asp:GridView>
     </div>
 </asp:Content>

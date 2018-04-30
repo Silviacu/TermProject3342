@@ -40,6 +40,33 @@ namespace _3342DevStepFinal {
         protected global::System.Web.UI.WebControls.Label lblAdvanced;
         
         /// <summary>
+        /// cbCoffee control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbCoffee;
+        
+        /// <summary>
+        /// cbSmoking control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbSmoking;
+        
+        /// <summary>
+        /// cbWifi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbWifi;
+        
+        /// <summary>
         /// cbKitchen control.
         /// </summary>
         /// <remarks>
@@ -49,31 +76,22 @@ namespace _3342DevStepFinal {
         protected global::System.Web.UI.WebControls.CheckBox cbKitchen;
         
         /// <summary>
-        /// cbWiFi control.
+        /// cbBreakfast control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbWiFi;
+        protected global::System.Web.UI.WebControls.CheckBox cbBreakfast;
         
         /// <summary>
-        /// cbCasino control.
+        /// ddlBed control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbCasino;
-        
-        /// <summary>
-        /// cbBeachView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbBeachView;
+        protected global::System.Web.UI.WebControls.DropDownList ddlBed;
         
         /// <summary>
         /// btnSearch control.

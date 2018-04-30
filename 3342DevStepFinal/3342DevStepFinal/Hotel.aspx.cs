@@ -23,8 +23,50 @@ namespace _3342DevStepFinal
         //Searches for hotels with avaliable rooms
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            lblMessage.Text = "";
+            string city = txtCity.Text;
+            string state = ddlState.SelectedItem.Text;
+            string bed = ddlBed.SelectedItem.Text;
+            int hotelID = 0;
+            int optionsCount = 0;
 
-            gvRoomResults.DataSource = proxy.GetHotels(txtCity.Text, ddlState.SelectedItem.ToString());
+            if (cbCoffee.Checked)
+                optionsCount++;
+            if (cbSmoking.Checked)
+                optionsCount++;
+            if (cbWifi.Checked)
+                optionsCount++;
+            if (cbKitchen.Checked)
+                optionsCount++;
+            if (cbBreakfast.Checked)
+                optionsCount++;
+
+            for (int i = 0; i < gvRoomResults.Rows.Count; i++)
+            {
+                if (gvRoomResults.Rows[i].FindControl("btnAddToCart") == sender)
+                {
+                    hotelID = int.Parse(gvRoomResults.Rows[i].Cells[0].Text);
+                }
+            }
+
+            if (optionsCount == 0)
+            {
+                Hotels.Amenities amen = new Hotels.Amenities();
+                gvRoomResults.DataSource = proxy.FindRooms(amen, city, state);
+            }
+
+            else
+            {
+                Hotels.Amenities amenities = new Hotels.Amenities();
+                amenities.HasFreeCoffee = cbCoffee.Checked;
+                amenities.IsSmoking = cbSmoking.Checked;
+                amenities.HasFreeWifi = cbWifi.Checked;
+                amenities.BedSize = bed;
+                amenities.HasKitchen = cbKitchen.Checked;
+                amenities.FreeBreakfast = cbBreakfast.Checked;
+                gvRoomResults.DataSource = proxy.FindRooms(amenities, txtCity.Text, ddlState.Text);
+            }
+
             gvRoomResults.DataBind();
         }
 
@@ -48,5 +90,10 @@ namespace _3342DevStepFinal
         //    }
         //    gvRoomResults.DataBind();
         //}
+
+        protected void btnAddToCart_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
