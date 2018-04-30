@@ -76,6 +76,13 @@
                     </td>
                 </tr>
                 <tr>
+                    <td><asp:Label ID="lblAdvanced" runat="server" Text="Advanced Search Options:" ></asp:Label></td>
+                    <td><asp:CheckBox ID="cbKitchen" runat="server" Text="Kitchen" /></td>
+                    <td><asp:CheckBox ID="cbWiFi" runat="server" Text="WiFi" /></td>
+                    <td><asp:CheckBox ID="cbCasino" runat="server" Text="Casino" /></td>
+                    <td><asp:CheckBox ID="cbBeachView" runat="server" Text="Beach View"/></td>
+                </tr>
+                <tr>
                     <td></td>
                     <td><asp:Button ID="btnSearch" runat="server" Text="Search for Hotels" onclick="btnSearch_Click"/></td>
                 </tr>
@@ -89,7 +96,7 @@
 <hr />
     <!-- /City & State Filter -->
     <div style="color:black;">
-        <asp:GridView ID="gvHotelResults" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" OnSelectedIndexChanged="gvHotelResults_SelectedIndexChanged">
+        <%--<asp:GridView ID="gvHotelResults" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" OnSelectedIndexChanged="gvHotelResults_SelectedIndexChanged">
             <AlternatingRowStyle BackColor="#F7F7F7" />
             <Columns>
                 <asp:BoundField DataField="HotelID" HeaderText="HotelID" />
@@ -97,10 +104,6 @@
                 <asp:BoundField DataField="Address" HeaderText="Address" />
                 <asp:BoundField DataField="City" HeaderText="City" />
                 <asp:BoundField DataField="State" HeaderText="State" />
-                <asp:ImageField DataImageUrlField="ImageURL" HeaderText="Image">
-                    <ControlStyle Height="80px" Width="120px" />
-                </asp:ImageField>
-                <asp:TemplateField>
                     <ItemTemplate>
                         <asp:Button ID="btnSearchforRooms" runat="server" Text="Search for Rooms" OnClick="btnSearchforRooms_Click" />
                     </ItemTemplate>
@@ -115,11 +118,11 @@
             <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
             <SortedDescendingCellStyle BackColor="#D8D8F0" />
             <SortedDescendingHeaderStyle BackColor="#3E3277" />
-        </asp:GridView>                      
+        </asp:GridView>--%>                      
     </div>
 
     <div>
-        <asp:GridView ID="gvRoomResults" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" GridLines="None" CellSpacing="1" OnSelectedIndexChanged="gvRoomResults_SelectedIndexChanged">
+        <asp:GridView ID="gvRoomResults" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" GridLines="None" CellSpacing="1">
             <Columns>
                 <asp:BoundField DataField="HotelID" HeaderText="HotelID" />
                 <asp:BoundField DataField="RoomID" HeaderText="RoomID" />
@@ -132,9 +135,9 @@
                 <asp:BoundField DataField="BeachView" HeaderText="Beach View" />
                 <asp:BoundField DataField="Reserved" HeaderText="Reserved" />
                 <asp:BoundField DataField="CostPerNight" HeaderText="Price" DataFormatString="{0:C}" />
-                <asp:ImageField DataImageUrlField="ImageURL" HeaderText="Image">
+<%--                <asp:ImageField DataImageUrlField="ImageURL" HeaderText="Image">
                     <ControlStyle Height="80px" Width="120px" />
-                </asp:ImageField>
+                </asp:ImageField>--%>
                 <asp:TemplateField>
                     <ItemTemplate>
                         <asp:Button ID="btnAddToCart" runat="server" OnClick="btnAddToCart_Click" Text="Add to Cart" />

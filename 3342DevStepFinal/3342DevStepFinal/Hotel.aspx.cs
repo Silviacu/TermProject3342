@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Globalization;
+using TermProjectLibrary;
+using System.Data.SqlClient;
 
 namespace _3342DevStepFinal
 {
@@ -19,34 +23,30 @@ namespace _3342DevStepFinal
         //Searches for hotels with avaliable rooms
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            gvHotelResults.Visible = true;
-            gvRoomResults.Visible = false;
 
-            gvHotelResults.DataSource = proxy.GetHotels(txtCity.Text, ddlState.SelectedItem.ToString());
-            gvHotelResults.DataBind();
-        }
-
-        protected void btnSearchforRooms_Click(object sender, EventArgs e)
-        {
-            gvHotelResults.Visible = false;
-            gvRoomResults.Visible = true;
-            int hotelID = 0;
-            Hotel thehotel;
-
-            for (int i = 0; i < gvHotelResults.Rows.Count; i++)
-            {
-                if (gvHotelResults.Rows[i].FindControl("btnSearchforRooms") == sender)
-                {
-                    hotelID = int.Parse(gvHotelResults.Rows[i].Cells[0].Text);
-                }
-
-                else
-                {
-                    
-                    gvRoomResults.DataSource = proxy.GetRoomsByHotel(thehotel);
-                }
-            }
+            gvRoomResults.DataSource = proxy.GetHotels(txtCity.Text, ddlState.SelectedItem.ToString());
             gvRoomResults.DataBind();
         }
+
+        //protected void btnSearchforRooms_Click(object sender, EventArgs e)
+        //{
+        //    gvHotelResults.Visible = false;
+        //    gvRoomResults.Visible = true;
+        //    int hotelID = 0;
+        //    Hotel thehotel ;
+
+        //    for (int i = 0; i < gvHotelResults.Rows.Count; i++)
+        //    {
+        //        if (gvHotelResults.Rows[i].FindControl("btnSearchforRooms") == sender)
+        //        {
+        //            hotelID = int.Parse(gvHotelResults.Rows[i].Cells[0].Text);
+        //        }
+        //        else
+        //        {
+        //            DataSet myDS = proxy.FindRoomsByHotel();
+        //        }
+        //    }
+        //    gvRoomResults.DataBind();
+        //}
     }
 }
