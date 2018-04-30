@@ -30,6 +30,7 @@ namespace _3342DevStepFinal
                 {
                     double carPrice = 0;
                     double activityPrice = 0;
+                    double flightPrice = 0;
                     UserVacation vacation = (UserVacation)Session["UserVacation"];
                     for(int i = 0; i < vacation.car.Count; i++)
                     {
@@ -38,9 +39,9 @@ namespace _3342DevStepFinal
                         divCar.InnerHtml += car.make + "&nbsp";
                         divCar.InnerHtml += car.model + "</h4><p>";
                         divCar.InnerHtml += "Price: $" + car.price + "<br/>";
-                        divCar.InnerHtml += "Number of Doors:" + car.numDoors + "<br/>";
-                        divCar.InnerHtml += "Eco-Friendly:" + car.eco + "<br/>";
-                        divCar.InnerHtml += "Number of Passengers:" + car.numPassenger + "</p></div></div></div>";
+                        divCar.InnerHtml += "Number of Doors: " + car.numDoors + "<br/>";
+                        divCar.InnerHtml += "Eco-Friendly: " + car.eco + "<br/>";
+                        divCar.InnerHtml += "Number of Passengers: " + car.numPassenger + "</p></div></div></div>";
                         carPrice = carPrice + car.price;
                         
                     }
@@ -48,7 +49,12 @@ namespace _3342DevStepFinal
                     {
                         Flights.FlightClass flight = vacation.flight[y];
                         divFlight.InnerHtml += "<div class='col-md-3'><div class='panel panel-default'><div class='panel-body'><h4>";
-                        divFlight.InnerHtml += "</div></div></div>";
+                        divFlight.InnerHtml += "To: " + flight.ArrivalCity + "</br>From: " + flight.DepartureCity + "</h4>";
+                        divFlight.InnerHtml += "<p>Depart: " + flight.DepartureDate + " at " + flight.DepartureTime + "</br>";
+                        divFlight.InnerHtml += "Arrive: " + flight.ArrivalDate + " at " + flight.ArrivalTime + "</br>";
+                        divFlight.InnerHtml += "Stops: " + flight.Stops + "</br> Class: " + flight.Class + "</br>";
+                        divFlight.InnerHtml += "Price: " + flight.Price + "</p></div></div></div>";
+                        flightPrice = flightPrice + (double)flight.Price; 
                     }
                     for(int x = 0; x <vacation.room.Count; x++)
                     {
@@ -64,7 +70,7 @@ namespace _3342DevStepFinal
                         divActivity.InnerHtml += "Price: $" + activity.Activity_cost + "</p></div></div></div>";
                         activityPrice = activityPrice + (double)activity.Activity_cost;
                     }
-                    total = activityPrice + carPrice;
+                    total = activityPrice + carPrice + flightPrice;
                     lblTotal.Text = total.ToString();
                 }
             }

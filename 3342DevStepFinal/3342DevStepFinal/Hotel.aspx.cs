@@ -31,7 +31,8 @@ namespace _3342DevStepFinal
             gvHotelResults.Visible = false;
             gvRoomResults.Visible = true;
             int hotelID = 0;
-            Hotel thehotel;
+            Hotels.Room thehotel = new Hotels.Room();
+            //Hotel thehotel;
 
             for (int i = 0; i < gvHotelResults.Rows.Count; i++)
             {

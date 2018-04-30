@@ -6,30 +6,37 @@
     <h4>Please review your order below before confirming.</h4>
 <hr />
     <div>
-        <div id="car" style="color:black">
-        <i class="fa show fa-car fa-7x"></i>
-            Car Reservations:
-            <div id="divCar" runat="server">
+        <div class="row">
+            <div id="car" style="color:black">
+                <i class="fa show fa-car fa-7x"></i>
+                Car Reservations:
+                <div id="divCar" runat="server">
+                </div>
             </div>
         </div>
 
-        <div id="flight" style="color:black">
-        <i class="fa show fa-plane fa-7x"></i>
-            Flight Reservations:
-            <div id="divFlight" runat="server"></div>
+         <div class="row">
+            <div id="flight" style="color:black">
+                <i class="fa show fa-plane fa-7x"></i>
+                Flight Reservations:
+                <div id="divFlight" runat="server"></div>
+            </div>
+         </div>
+
+        <div class="row">
+            <div id="hotel" style="color:black">
+                <i class="fa show fa-bed fa-7x"></i>
+                Hotel Reservations:
+                <div id="divHotel" runat="server"></div>
+            </div>
         </div>
 
-        <div id="hotel" style="color:black">
-        <i class="fa show fa-bed fa-7x"></i>
-            Hotel Reservations:
-            <div id="divHotel" runat="server"></div>
-        </div>
-
-        <div id="activity" style="color:black">
-        <i class="fa show fa-ticket-alt fa-7x"></i>
-            Activities Reservations:
-            <div id="divActivity" runat="server"></div>
-            <hr />
+        <div class="row">
+            <div id="activity" style="color:black">
+                <i class="fa show fa-ticket-alt fa-7x"></i>
+                Activities Reservations:
+                <div id="divActivity" runat="server"></div>
+            </div>
         </div>
     </div>
     <br /><br />

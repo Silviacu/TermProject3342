@@ -46,15 +46,17 @@ namespace _3342DevStepFinal
                 {
                     UserVacation userVacation = new UserVacation();
                     Flights.FlightClass flight = new Flights.FlightClass();
-                    flight.DepartureCity = txtDepartureCity.Text;
                     flight.ArrivalCity = txtArrivalCity.Text;
-
-                    //add.flight.Add(int.Parse(gvFlightResults.Rows[i].Cells[0].Text));
-                    //add.Price = int.Parse(gvFlightResults.Rows[i].Cells[4].Text, NumberStyles.Currency);
-                    //add.Description = "Air Carrier: " + gvFlightResults.Rows[i].Cells[2].Text +
-                    //                    " Departure Time: " + gvFlightResults.Rows[i].Cells[3].Text;
-                    //cart.AddtoCart(add);
-
+                    flight.DepartureCity = txtDepartureCity.Text;
+                    flight.DepartureDate = gvFlightResults.Rows[i].Cells[1].Text;
+                    flight.DepartureTime = gvFlightResults.Rows[i].Cells[2].Text;
+                    flight.ArrivalDate = gvFlightResults.Rows[i].Cells[3].Text;
+                    flight.ArrivalTime = gvFlightResults.Rows[i].Cells[4].Text;
+                    flight.Stops = Convert.ToInt16(ddlStops.SelectedValue);
+                    flight.Class = ddlFlightOption.SelectedValue;
+                    string price = gvFlightResults.Rows[i].Cells[5].Text;
+                    flight.Price = decimal.Parse(gvFlightResults.Rows[i].Cells[5].Text);
+                    
                     if (Session["UserVacation"] != null)
                     {
                         userVacation = (UserVacation)Session["UserVacation"];
