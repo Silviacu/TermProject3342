@@ -50,11 +50,15 @@ namespace _3342DevStepFinal
             userVacation.activity.Add(activity);
             userVacation.activityQuan.Add(1);
             Session["UserVacation"] = userVacation;
-
+            lblMessage.Visible = true;
+            lblMessage.Text = "The activity has been added to your cart!";
+            divActivities.Visible = false;
+            divSearchActivities.Visible = false;
         }
 
         protected void btnNext_Click(object sender, EventArgs e)
         {
+            lblMessage.Visible = false;
             if (txtCity.Text.Equals("") || ddlState.SelectedValue == "Select State")
             {
                 ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "Client Script", "alert('Please enter a valid city and state!')", true);

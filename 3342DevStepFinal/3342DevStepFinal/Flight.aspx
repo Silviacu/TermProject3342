@@ -156,19 +156,20 @@
                     <td><asp:Label ID="lblMessage" runat="server" style="color:red"></asp:Label></td>
                 </tr>
             </table>
-
+            <br /><br />&nbsp&nbsp
             <asp:GridView ID="gvFlightResults" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" style="color:white;">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
-                    <asp:BoundField DataField="FlightID" HeaderText="FlightID" />
-                    <asp:BoundField DataField="AirCarrierID" HeaderText="AirCarrierID" />
                     <asp:BoundField DataField="AirCarrierName" HeaderText="Air Carrier Name" />
-                    <asp:BoundField DataField="DepartureDateTime" HeaderText="Departure Time" />
-                    <asp:BoundField DataField="Price" HeaderText="Price" DataFormatString="{0:C}" />
+                    <asp:BoundField DataField="DepartureDate" HeaderText="Departure Date" />
+                    <asp:BoundField DataField="DepartureTime" HeaderText="Departure Time" />
+                    <asp:BoundField DataField="ArrivalDate" HeaderText="Arrival Date" />
+                    <asp:BoundField DataField="ArrivalTime" HeaderText="Arrival Time" />
+                    <asp:BoundField DataField="Price" HeaderText="Price" />
                     <%--<asp:ImageField HeaderText="Image" DataImageUrlField="Image"></asp:ImageField>--%>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button ID="btnAddToCart" runat="server" Text="Add to Cart" OnClick="btnAddToCart_OnClick" />
+                            <asp:Button ID="btnAddToCart" runat="server" Text="Add to Cart" OnClick="btnAddToCart_Click" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

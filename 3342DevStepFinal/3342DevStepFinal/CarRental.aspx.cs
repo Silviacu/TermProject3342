@@ -63,10 +63,15 @@ namespace _3342DevStepFinal
             userVacation.car.Add(rental);
             userVacation.carQuan.Add(1);
             Session["UserVacation"] = userVacation;
+            divCars.Visible = false;
+            divSearchCars.Visible = false;
+            lblMessage.Visible = true;
+            lblMessage.Text = "The car has been added to your trip!";
         }
 
         protected void btnNext_Click(object sender, EventArgs e)
         {
+            lblMessage.Visible = false;
             if (txtCity.Text.Equals("") || ddlState.SelectedValue == "Select State")
             {
                 ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "Client Script", "alert('Please enter a valid city and state!')", true);

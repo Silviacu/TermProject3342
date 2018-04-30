@@ -20,7 +20,9 @@ c:\users\triss\documents\visual studio 2015\Projects\3342DevStepFinal\3342DevSte
 c:\users\triss\documents\visual studio 2015\Projects\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.csprojResolveAssemblyReference.cache
 c:\users\triss\documents\visual studio 2015\Projects\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.dll
 c:\users\triss\documents\visual studio 2015\Projects\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.pdb
-C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.csprojResolveAssemblyReference.cache
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.csprojResolveAssemblyReference.cache
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.dll
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.pdb
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\csc.exe
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -40,8 +42,6 @@ C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bi
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\Utilities.dll
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\Utilities.pdb
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.csprojResolveAssemblyReference.cache
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.dll
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.pdb
-C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.csprojResolveAssemblyReference.cache
-C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.dll
-C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.pdb

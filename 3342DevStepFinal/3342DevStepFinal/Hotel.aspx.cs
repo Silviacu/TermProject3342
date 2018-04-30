@@ -17,7 +17,10 @@ namespace _3342DevStepFinal
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Email"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
         //Searches for hotels with avaliable rooms
@@ -52,6 +55,7 @@ namespace _3342DevStepFinal
             if (optionsCount == 0)
             {
                 Hotels.Amenities amen = new Hotels.Amenities();
+                amen.BedSize = ddlBed.SelectedValue;
                 gvRoomResults.DataSource = proxy.FindRooms(amen, city, state);
             }
 
@@ -61,7 +65,7 @@ namespace _3342DevStepFinal
                 amenities.HasFreeCoffee = cbCoffee.Checked;
                 amenities.IsSmoking = cbSmoking.Checked;
                 amenities.HasFreeWifi = cbWifi.Checked;
-                amenities.BedSize = bed;
+                amenities.BedSize = ddlBed.SelectedValue;
                 amenities.HasKitchen = cbKitchen.Checked;
                 amenities.FreeBreakfast = cbBreakfast.Checked;
                 gvRoomResults.DataSource = proxy.FindRooms(amenities, txtCity.Text, ddlState.Text);
@@ -93,6 +97,34 @@ namespace _3342DevStepFinal
 
         protected void btnAddToCart_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < gvRoomResults.Rows.Count; i++)
+            {
+                if (gvRoomResults.Rows[i].FindControl("btnAddToCart") == sender)
+                {
+                    UserVacation userVacation = new UserVacation();
+                    Hotels.Room room = new Hotels.Room();
+                    room.City = txtCity.Text;
+                    room.State = ddlState.SelectedValue;
+                    room.RoomDesc = gvRoomResults.Rows[i].Cells[1].Text;
+                    room.Price = float.Parse(gvRoomResults.Rows[i].Cells[9].Text);
+
+                    if (Session["UserVacation"] != null)
+                    {
+                        userVacation = (UserVacation)Session["UserVacation"];
+                    }
+                    else
+                    {
+                        userVacation = new UserVacation();
+                    }
+
+                    userVacation.room.Add(room);
+                    userVacation.roomQuan.Add(1);
+                    Session["UserVacation"] = userVacation;
+
+                    gvRoomResults.Visible = false;
+                    lblMessage.Text = "Your room has been booked!";
+                }
+            }
 
         }
     }
