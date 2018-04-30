@@ -76,6 +76,7 @@
                     </td>
                 </tr>
                 <tr>
+
                     <td><asp:Label ID="lblAdvanced" runat="server" Text="Advanced Search Options:" ></asp:Label></td>
                     <td><asp:CheckBox ID="cbCoffee" runat="server" Text="Has Free Coffee" /></td>
                     <td><asp:CheckBox ID="cbSmoking" runat="server" Text="Smoking" /></td>
@@ -105,50 +106,21 @@
         </div>
     </div>
 <hr />
-    <!-- /City & State Filter -->
-    <div style="color:black;">
-        <%--<asp:GridView ID="gvHotelResults" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" OnSelectedIndexChanged="gvHotelResults_SelectedIndexChanged">
-            <AlternatingRowStyle BackColor="#F7F7F7" />
-            <Columns>
-                <asp:BoundField DataField="HotelID" HeaderText="HotelID" />
-                <asp:BoundField DataField="Name" HeaderText="Name" />
-                <asp:BoundField DataField="Address" HeaderText="Address" />
-                <asp:BoundField DataField="City" HeaderText="City" />
-                <asp:BoundField DataField="State" HeaderText="State" />
-                    <ItemTemplate>
-                        <asp:Button ID="btnSearchforRooms" runat="server" Text="Search for Rooms" OnClick="btnSearchforRooms_Click" />
-                    </ItemTemplate>
-                </asp:TemplateField>
-            </Columns>
-            <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
-            <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
-            <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
-            <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
-            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
-            <SortedAscendingCellStyle BackColor="#F4F4FD" />
-            <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
-            <SortedDescendingCellStyle BackColor="#D8D8F0" />
-            <SortedDescendingHeaderStyle BackColor="#3E3277" />
-        </asp:GridView>--%>                      
-    </div>
 
     <div>
         <asp:GridView ID="gvRoomResults" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal">
             <AlternatingRowStyle BackColor="#F7F7F7" />
             <Columns>
-                <asp:BoundField DataField="HotelID" HeaderText="HotelID" />
-                <asp:BoundField DataField="RoomID" HeaderText="RoomID" />
-                <asp:BoundField DataField="CheckInDate" HeaderText="Check In Date" DataFormatString="{0:MMMM d, yyyy}" />
-                <asp:BoundField DataField="CheckOutDate" HeaderText="Check Out Date" DataFormatString="{0:MMMM d, yyyy}" />
-                <asp:BoundField DataField="NumberofBeds" HeaderText="Number of Beds" />
-                <asp:BoundField DataField="HasFreeCoffeeField" HeaderText="Free Coffee" />
-                <asp:BoundField DataField="IsSmokingAllowedField" HeaderText="Smoking Allowed" />
-                <asp:BoundField DataField="HasFreeWifiField" HeaderText="Free Wifi" />
-                <asp:BoundField DataField="BedSizeField" HeaderText="BedSize" />
-                <asp:BoundField DataField="HasKitchenField" HeaderText="Kitchen" />
-                <asp:BoundField DataField="FreeBreakfastField" HeaderText="Free Breakfast" />
-                <asp:BoundField DataField="Reserved" HeaderText="Reserved" />
-                <asp:BoundField DataField="CostPerNight" HeaderText="Price" DataFormatString="{0:C}" />
+                <asp:BoundField DataField="h_name" HeaderText="Hotel Name" />
+                <asp:BoundField DataField="room_desc" HeaderText="Room Description" />
+                <asp:BoundField DataField="comfortablySleeps" HeaderText="Sleeps" />
+                <asp:BoundField DataField="hasFreeCoffee" HeaderText="Free Coffee" />
+                <asp:BoundField DataField="isSmoking" HeaderText="Smoking Allowed" />
+                <asp:BoundField DataField="hasFreeWifi" HeaderText="Free Wifi" />
+                <asp:BoundField DataField="bedSize" HeaderText="Bed Size" />
+                <asp:BoundField DataField="hasKitchen" HeaderText="Kitchen" />
+                <asp:BoundField DataField="freeBreakfast" HeaderText="Free Breakfast" />
+                <asp:BoundField DataField="price" HeaderText="Price" />
                 <asp:TemplateField>
                     <ItemTemplate>
                         <asp:Button ID="btnAddToCart" runat="server" OnClick="btnAddToCart_Click" Text="Add to Cart" />

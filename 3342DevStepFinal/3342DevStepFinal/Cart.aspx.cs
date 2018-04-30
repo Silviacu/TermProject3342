@@ -31,6 +31,7 @@ namespace _3342DevStepFinal
                     double carPrice = 0;
                     double activityPrice = 0;
                     double flightPrice = 0;
+                    double hotelPrice = 0;
                     UserVacation vacation = (UserVacation)Session["UserVacation"];
                     for(int i = 0; i < vacation.car.Count; i++)
                     {
@@ -60,7 +61,10 @@ namespace _3342DevStepFinal
                     {
                         Hotels.Room room = vacation.room[x];
                         divHotel.InnerHtml += "<div class='col-md-3'><div class='panel panel-default'><div class='panel-body'><h4>";
-                        divHotel.InnerHtml += "</div></div></div>";
+                        divHotel.InnerHtml += "Location: " + room.City + ", " + room.State + "</h4>";
+                        divHotel.InnerHtml += "<p>Description: " + room.RoomDesc + "</br>Price: $" + room.Price;
+                        divHotel.InnerHtml += "</p></div></div></div>";
+                        hotelPrice = hotelPrice + room.Price;
                     }
                     for (int j = 0; j < vacation.activity.Count; j++)
                     {
@@ -70,7 +74,7 @@ namespace _3342DevStepFinal
                         divActivity.InnerHtml += "Price: $" + activity.Activity_cost + "</p></div></div></div>";
                         activityPrice = activityPrice + (double)activity.Activity_cost;
                     }
-                    total = activityPrice + carPrice + flightPrice;
+                    total = activityPrice + carPrice + flightPrice + hotelPrice;
                     lblTotal.Text = total.ToString();
                 }
             }

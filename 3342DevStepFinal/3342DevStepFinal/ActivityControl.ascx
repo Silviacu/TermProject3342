@@ -126,6 +126,9 @@
                 </div>
             </div>
         </div>
+        <h3>
+            <asp:Label ID="lblMessage" runat="server" ForeColor="Red" Visible="false"></asp:Label>
+        </h3>
         <div id="divActivities" style="text-align:center" runat="server">
             <div class="page-header">
                 <h3>Activities For You:</h3>

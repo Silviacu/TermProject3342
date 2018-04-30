@@ -18,7 +18,10 @@ namespace _3342DevStepFinal
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            cart = (Cart)Session["Cart"];
+            if (Session["Email"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
