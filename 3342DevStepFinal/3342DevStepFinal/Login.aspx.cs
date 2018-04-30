@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using Utilities;
 using System.Data;
 using System.Data.SqlClient;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace _3342DevStepFinal
 {
@@ -98,6 +100,33 @@ namespace _3342DevStepFinal
         protected void btnRegister_Click(object sender, EventArgs e)
         {
             Response.Redirect("Register.aspx");
+        }
+
+        private UserVacation DeserializeCart()
+        {
+            int userID = (int)Session["Login"];
+
+            DBConnect sqlDB = new DBConnect();
+            UserVacation cart = new UserVacation();
+
+            SqlCommand obj = new SqlCommand();
+            obj.CommandType = CommandType.StoredProcedure;
+            obj.CommandText = "TermProjectDeserializeCart";
+            obj.Parameters.AddWithValue("@userID", userID);
+
+            byte[] byteArray;
+            DataSet cartDS = sqlDB.GetDataSetUsingCmdObj(obj);
+            DataRow record = cartDS.Tables[0].Rows[0];
+
+            if (record[0] != DBNull.Value)
+            {
+                byteArray = (byte[])record[0];
+                BinaryFormatter deserializer = new BinaryFormatter();
+                MemoryStream memStream = new MemoryStream(byteArray);
+                cart = (UserVacation)deserializer.Deserialize(memStream);
+            }
+
+            return cart;
         }
     }
 }
