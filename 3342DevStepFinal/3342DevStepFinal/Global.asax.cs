@@ -57,7 +57,7 @@ namespace _3342DevStepFinal
                 DBConnect objDB = new DBConnect();
                 SqlCommand objCommand = new SqlCommand();
                 objCommand.CommandType = CommandType.StoredProcedure;
-                objCommand.CommandText = "TermProjectSerializeCart";
+                objCommand.CommandText = "TheSerializeCart";
 
                 objCommand.Parameters.AddWithValue("@userID", userID);
                 objCommand.Parameters.AddWithValue("@cartArray", byteArray);
