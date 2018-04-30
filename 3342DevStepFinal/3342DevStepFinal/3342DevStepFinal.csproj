@@ -69,6 +69,7 @@
     <Content Include="ActivityControl.ascx" />
     <Content Include="Cart.aspx" />
     <Content Include="css\Login.css" />
+    <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="Home.Master" />
@@ -159,6 +160,9 @@
     </Compile>
     <Compile Include="Flight.aspx.designer.cs">
       <DependentUpon>Flight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
