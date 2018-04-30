@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Globalization;
 using TermProjectLibrary;
+using System.Data.SqlClient;
 
 namespace _3342DevStepFinal
 {
@@ -23,37 +24,52 @@ namespace _3342DevStepFinal
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             lblMessage.Text = "";
-            //aircarrierid  Flights.AirCarrierClass = txtaircarrierID.Text;
-
             string departureCity = txtDepartureCity.Text;
             string departureState = ddlDepartureState.SelectedItem.Text;
             string arrivalCity = txtArrivalCity.Text;
             string arrivalState = ddlArrivalState.SelectedItem.Text;
 
-            DataSet dataflight = new DataSet();
+            Flights.RequirementClass reqflight = new Flights.RequirementClass();
+            reqflight.requirementStops = ddlStops.SelectedValue;
+            reqflight.requirementClass = ddlFlightOption.SelectedValue;
 
-            //Check how to reference AirCarrierID
-            //dataflight = proxy.GetFlights(airCarrierID, departureState, arrivalCity, arrivalState);
-            gvFlightResults.DataSource = dataflight;
+            DataSet myDS = proxy.FindFlights(reqflight, departureCity, departureState, arrivalCity, arrivalState);
+            gvFlightResults.DataSource = myDS;
             gvFlightResults.DataBind();
         }
+
         protected void btnAddToCart_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < gvFlightResults.Rows.Count; i++)
             {
                 if (gvFlightResults.Rows[i].FindControl("btnAddToCart") == sender)
                 {
-                    VacationItem add = new VacationItem();
-                    add.FlightID = int.Parse(gvFlightResults.Rows[i].Cells[0].Text);
-                    add.IsFlight = true;
-                    add.Price = int.Parse(gvFlightResults.Rows[i].Cells[4].Text, NumberStyles.Currency);
-                    add.Description = "Air Carrier: " + gvFlightResults.Rows[i].Cells[2].Text +
-                                        " Departure Time: " + gvFlightResults.Rows[i].Cells[3].Text;
+                    UserVacation userVacation = new UserVacation();
+                    Flights.FlightClass flight = new Flights.FlightClass();
+                    flight.DepartureCity = txtDepartureCity.Text;
+                    flight.ArrivalCity = txtArrivalCity.Text;
 
+                    //add.flight.Add(int.Parse(gvFlightResults.Rows[i].Cells[0].Text));
+                    //add.Price = int.Parse(gvFlightResults.Rows[i].Cells[4].Text, NumberStyles.Currency);
+                    //add.Description = "Air Carrier: " + gvFlightResults.Rows[i].Cells[2].Text +
+                    //                    " Departure Time: " + gvFlightResults.Rows[i].Cells[3].Text;
                     //cart.AddtoCart(add);
+
+                    if (Session["UserVacation"] != null)
+                    {
+                        userVacation = (UserVacation)Session["UserVacation"];
+                    }
+                    else
+                    {
+                        userVacation = new UserVacation();
+                    }
+
+                    userVacation.flight.Add(flight);
+                    userVacation.flightQuan.Add(1);
+                    Session["UserVacation"] = userVacation;
+
                     gvFlightResults.Visible = false;
                     lblMessage.Text = "Your flight has successfully been added to cart";
-
                 }
             }
         }

@@ -151,7 +151,7 @@
     <Compile Include="Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cart.cs" />
+    <Compile Include="CartClass.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Flight.aspx.cs">
       <DependentUpon>Flight.aspx</DependentUpon>

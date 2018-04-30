@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 namespace TermProjectLibrary
 {
     [Serializable]
-    public class Cart
+    public class CartClass
     {
         private ArrayList hotels;
         private ArrayList flights;
         private ArrayList events;
         private ArrayList cars;
 
-        public Cart()
+        public CartClass()
         {
             hotels = new ArrayList();
             flights = new ArrayList();

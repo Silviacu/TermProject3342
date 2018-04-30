@@ -3,15 +3,15 @@
     <link href="css/Flight.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<h1>Book a Flight for: <asp:Label ID="lblState" runat="server" Text="lblState"></asp:Label></h1>
+<h1>Book a Flight:</h1>
     <div class="row">
         <div class="col-md-12">
             <!-- State / City Filter -->
-            <table style="color:black">
+            <table style="color:white;">
                 <tr>
                     <td><h4>Departure City and State:</h4></td>
-                    <td><asp:TextBox ID="txtDepartureCity" runat="server" /></td>
-                    <td><asp:DropDownList ID="ddlDepartureState" runat="server">
+                    <td><asp:TextBox ID="txtDepartureCity" runat="server" style="color:black;" /></td>
+                    <td><asp:DropDownList ID="ddlDepartureState" runat="server" style="color:black;">
                             <asp:ListItem>AK</asp:ListItem>
                             <asp:ListItem>AL</asp:ListItem>
                             <asp:ListItem>AR</asp:ListItem>
@@ -68,8 +68,8 @@
 
                 <tr>
                     <td><h4>Arrival City and State:</h4></td>
-                    <td><asp:TextBox ID="txtArrivalCity" runat="server" /></td>
-                    <td><asp:DropDownList ID="ddlArrivalState" runat="server">
+                    <td><asp:TextBox ID="txtArrivalCity" runat="server" style="color:black;"/></td>
+                    <td><asp:DropDownList ID="ddlArrivalState" runat="server" style="color:black;">
                             <asp:ListItem>AK</asp:ListItem>
                             <asp:ListItem>AL</asp:ListItem>
                             <asp:ListItem>AR</asp:ListItem>
@@ -121,17 +121,43 @@
                             <asp:ListItem>WV</asp:ListItem>
                             <asp:ListItem>WY</asp:ListItem>
                         </asp:DropDownList>
+                    </td>                
+                </tr>
+                <tr><td></td>
+                    <td>Advanced Search Options</td></tr>
+                <tr>
+                    <td>Number of Stops</td>
+                    <td>
+                        <asp:DropDownList ID="ddlStops" runat="server" style="color:black;">
+                            <asp:ListItem Value="0">0</asp:ListItem>
+                            <asp:ListItem Value="1">1</asp:ListItem>
+                            <asp:ListItem Value="2">2</asp:ListItem>
+                            <asp:ListItem Value="3">3</asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Flight Options</td>
+                    <td>
+                        <asp:DropDownList ID="ddlFlightOption" runat="server" style="color:black;">
+                            <asp:ListItem Value="Economy">Economy</asp:ListItem>
+                            <asp:ListItem Value="Business">Business</asp:ListItem>
+                            <asp:ListItem Value="Premium">Premium</asp:ListItem>
+                            <asp:ListItem Value="First">First</asp:ListItem>
+                        </asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><asp:Button ID="btnSearch" runat="server" Text="Search" style="width: 67px" OnClick="btnSearch_Click"/></td>
+                    <td><asp:Button ID="btnSearch" Text="Search" CssClass="btn btn-default" runat="server" OnClick="btnSearch_Click" /></td>
+                </tr>
+                <tr>
+                    <td></td>    
                     <td><asp:Label ID="lblMessage" runat="server" style="color:red"></asp:Label></td>
                 </tr>
             </table>
-            <hr />
 
-            <asp:GridView ID="gvFlightResults" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="gvFlightResults" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" style="color:white;">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
                     <asp:BoundField DataField="FlightID" HeaderText="FlightID" />
@@ -142,7 +168,7 @@
                     <%--<asp:ImageField HeaderText="Image" DataImageUrlField="Image"></asp:ImageField>--%>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button ID="btnAddToCart" runat="server" Text="Add to Cart" OnClick="btnAddToCart_Click" />
+                            <asp:Button ID="btnAddToCart" runat="server" Text="Add to Cart" OnClick="btnAddToCart_OnClick" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
@@ -159,5 +185,6 @@
             </asp:GridView>
         </div>
     </div>
+<hr />
 
 </asp:Content>
