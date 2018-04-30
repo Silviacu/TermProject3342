@@ -2,3 +2,8 @@ C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\Utilities\bin\Debug
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\Utilities\bin\Debug\Utilities.pdb
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\Utilities\obj\Debug\Utilities.dll
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\Utilities\obj\Debug\Utilities.pdb
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\Utilities\bin\Debug\Utilities.dll
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\Utilities\bin\Debug\Utilities.pdb
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\Utilities\obj\Debug\Utilities.dll
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\Utilities\obj\Debug\Utilities.pdb

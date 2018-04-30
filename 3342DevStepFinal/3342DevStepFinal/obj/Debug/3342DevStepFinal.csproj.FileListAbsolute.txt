@@ -42,3 +42,6 @@ C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bi
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.dll
 C:\Users\Devon\Source\Repos\TermProject3342\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.pdb
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.csprojResolveAssemblyReference.cache
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.dll
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\3342DevStepFinal\obj\Debug\3342DevStepFinal.pdb
