@@ -14,7 +14,7 @@ namespace _3342DevStepFinal
     public partial class Flight : System.Web.UI.Page
     {
         Flights.AirService proxy = new Flights.AirService();
-        Cart cart;
+        UserVacation cart;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,7 +26,7 @@ namespace _3342DevStepFinal
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            lblMessage.Text = "";
+            //lblMessage.Text = "This button works";
             string departureCity = txtDepartureCity.Text;
             string departureState = ddlDepartureState.SelectedItem.Text;
             string arrivalCity = txtArrivalCity.Text;
@@ -35,8 +35,8 @@ namespace _3342DevStepFinal
             Flights.RequirementClass reqflight = new Flights.RequirementClass();
             reqflight.requirementStops = ddlStops.SelectedValue;
             reqflight.requirementClass = ddlFlightOption.SelectedValue;
-
-            DataSet myDS = proxy.FindFlights(reqflight, departureCity, departureState, arrivalCity, arrivalState);
+            DataSet myDS = new DataSet();
+            myDS = proxy.FindFlights(reqflight, departureCity, departureState, arrivalCity, arrivalState);
             gvFlightResults.DataSource = myDS;
             gvFlightResults.DataBind();
         }

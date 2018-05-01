@@ -129,7 +129,6 @@
                     <td>Number of Stops</td>
                     <td>
                         <asp:DropDownList ID="ddlStops" runat="server" style="color:black;">
-                            <asp:ListItem Value="0">0</asp:ListItem>
                             <asp:ListItem Value="1">1</asp:ListItem>
                             <asp:ListItem Value="2">2</asp:ListItem>
                             <asp:ListItem Value="3">3</asp:ListItem>

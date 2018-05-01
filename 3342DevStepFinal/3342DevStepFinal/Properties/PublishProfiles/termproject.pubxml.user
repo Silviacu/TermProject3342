@@ -16,10 +16,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/30/2018 18:19:44</publishTime>
     </File>
     <File Include="bin/3342DevStepFinal.dll">
-      <publishTime>04/30/2018 20:09:18</publishTime>
+      <publishTime>04/30/2018 21:08:41</publishTime>
     </File>
     <File Include="bin/3342DevStepFinal.XmlSerializers.dll">
-      <publishTime>04/30/2018 20:09:18</publishTime>
+      <publishTime>04/30/2018 21:08:42</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>04/29/2018 20:07:49</publishTime>
@@ -67,7 +67,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/30/2018 18:19:44</publishTime>
     </File>
     <File Include="Cart.aspx">
-      <publishTime>04/30/2018 18:19:44</publishTime>
+      <publishTime>04/30/2018 21:05:10</publishTime>
+    </File>
+    <File Include="color.js">
+      <publishTime>04/30/2018 21:07:33</publishTime>
+    </File>
+    <File Include="Confirmation.aspx">
+      <publishTime>04/30/2018 20:37:31</publishTime>
     </File>
     <File Include="css/Activity.css">
       <publishTime>04/29/2018 20:07:48</publishTime>
@@ -103,7 +109,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/30/2018 18:19:44</publishTime>
     </File>
     <File Include="Login.aspx">
-      <publishTime>04/29/2018 20:07:48</publishTime>
+      <publishTime>04/30/2018 21:05:07</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>04/29/2018 20:07:49</publishTime>
