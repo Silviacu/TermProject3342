@@ -13,6 +13,15 @@ namespace _3342DevStepFinal {
     public partial class Cart {
         
         /// <summary>
+        /// wholeorder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl wholeorder;
+        
+        /// <summary>
         /// divCar control.
         /// </summary>
         /// <remarks>
@@ -56,5 +65,32 @@ namespace _3342DevStepFinal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTotal;
+        
+        /// <summary>
+        /// btnCheckOut control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCheckOut;
+        
+        /// <summary>
+        /// confirm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl confirm;
+        
+        /// <summary>
+        /// lblTotal2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotal2;
     }
 }

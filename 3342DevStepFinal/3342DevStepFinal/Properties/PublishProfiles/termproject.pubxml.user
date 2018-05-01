@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>X:\TermProject</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Activity.aspx">
+      <publishTime>04/29/2018 20:07:48</publishTime>
+    </File>
+    <File Include="ActivityControl.ascx">
+      <publishTime>04/30/2018 18:19:44</publishTime>
+    </File>
+    <File Include="bin/3342DevStepFinal.dll">
+      <publishTime>04/30/2018 20:09:18</publishTime>
+    </File>
+    <File Include="bin/3342DevStepFinal.XmlSerializers.dll">
+      <publishTime>04/30/2018 20:09:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>04/29/2018 20:07:49</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>04/29/2018 20:07:50</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>04/29/2018 20:07:50</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>04/29/2018 20:07:50</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>04/29/2018 20:07:50</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>04/29/2018 20:07:50</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>04/29/2018 20:07:50</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>04/29/2018 20:07:50</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>04/29/2018 20:07:50</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>04/29/2018 20:07:50</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>04/29/2018 20:07:50</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>04/29/2018 20:07:50</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>04/29/2018 20:07:50</publishTime>
+    </File>
+    <File Include="bin/Utilities.dll">
+      <publishTime>04/30/2018 20:09:12</publishTime>
+    </File>
+    <File Include="CarRental.aspx">
+      <publishTime>04/30/2018 18:19:44</publishTime>
+    </File>
+    <File Include="Cart.aspx">
+      <publishTime>04/30/2018 18:19:44</publishTime>
+    </File>
+    <File Include="css/Activity.css">
+      <publishTime>04/29/2018 20:07:48</publishTime>
+    </File>
+    <File Include="css/CarRental.css">
+      <publishTime>04/29/2018 20:07:48</publishTime>
+    </File>
+    <File Include="css/Flight.css">
+      <publishTime>04/29/2018 20:07:48</publishTime>
+    </File>
+    <File Include="css/home.css">
+      <publishTime>04/29/2018 20:07:48</publishTime>
+    </File>
+    <File Include="css/Hotel.css">
+      <publishTime>04/29/2018 20:07:48</publishTime>
+    </File>
+    <File Include="css/Login.css">
+      <publishTime>04/29/2018 20:07:48</publishTime>
+    </File>
+    <File Include="Flight.aspx">
+      <publishTime>04/30/2018 18:19:44</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/30/2018 19:59:59</publishTime>
+    </File>
+    <File Include="Home.aspx">
+      <publishTime>04/29/2018 20:07:48</publishTime>
+    </File>
+    <File Include="Home.Master">
+      <publishTime>04/29/2018 20:07:48</publishTime>
+    </File>
+    <File Include="Hotel.aspx">
+      <publishTime>04/30/2018 18:19:44</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>04/29/2018 20:07:48</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/29/2018 20:07:49</publishTime>
+    </File>
+    <File Include="Pictures/logo.png">
+      <publishTime>04/29/2018 20:07:49</publishTime>
+    </File>
+    <File Include="Register.aspx">
+      <publishTime>04/29/2018 20:07:49</publishTime>
+    </File>
+    <File Include="Web References/Cars/Reference.map">
+      <publishTime>04/29/2018 20:07:49</publishTime>
+    </File>
+    <File Include="Web References/Experiences/Reference.map">
+      <publishTime>04/29/2018 20:07:49</publishTime>
+    </File>
+    <File Include="Web References/Flights/Reference.map">
+      <publishTime>04/29/2018 20:07:49</publishTime>
+    </File>
+    <File Include="Web References/Hotels/Reference.map">
+      <publishTime>04/29/2018 20:07:49</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/30/2018 20:09:19</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

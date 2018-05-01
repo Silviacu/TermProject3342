@@ -68,11 +68,13 @@
   <ItemGroup>
     <Content Include="ActivityControl.ascx" />
     <Content Include="Cart.aspx" />
+    <Content Include="Confirmation.aspx" />
     <Content Include="css\Login.css" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="Home.Master" />
+    <None Include="Properties\PublishProfiles\termproject.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -153,6 +155,13 @@
       <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="CartClass.cs" />
+    <Compile Include="Confirmation.aspx.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Confirmation.aspx.designer.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="Flight.aspx.cs">
       <DependentUpon>Flight.aspx</DependentUpon>

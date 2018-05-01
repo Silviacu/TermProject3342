@@ -1,0 +1,54 @@
+﻿* {
+    box-sizing: border-box;
+    
+}
+
+html, body { 
+    background: linear-gradient(45deg,#000000,#808080);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+a.box-ctn {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg,#d62667,#97257c);
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px -4px rgba(0, 40, 80, .5);
+    transition: .2s;
+    cursor: pointer;
+}
+
+a.box-ctn:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 32px -8px rgba(0, 40, 80, .5);
+    filter: contrast(1.2) brightness(1.2);
+}
+
+.content-ctn {
+    padding: 48px;
+}
+
+.navbar {
+    margin-bottom: 0px !important;
+}
+
+.content {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.box-hidden-text {
+    max-height: 0px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+a.box-ctn:hover > .box-hidden-text {
+    max-height: 100px;
+}

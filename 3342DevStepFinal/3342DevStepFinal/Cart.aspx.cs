@@ -76,11 +76,21 @@ namespace _3342DevStepFinal
                     }
                     total = activityPrice + carPrice + flightPrice + hotelPrice;
                     lblTotal.Text = total.ToString();
+                    lblTotal2.Text = total.ToString();
                 }
             }
 
             //this.UpdateSubtotals();
         }
+
+        protected void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            confirm.Visible = true;
+            wholeorder.Visible = false;
+            Session.Clear();
+        }
+
+
 
         /*private void UpdateSubtotals()
         {

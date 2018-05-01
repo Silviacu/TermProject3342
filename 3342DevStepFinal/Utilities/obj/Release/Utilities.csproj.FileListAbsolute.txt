@@ -1,0 +1,5 @@
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\Utilities\bin\Release\Utilities.dll
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\Utilities\bin\Release\Utilities.pdb
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\Utilities\obj\Release\Utilities.csprojResolveAssemblyReference.cache
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\Utilities\obj\Release\Utilities.dll
+C:\Users\Triss\Desktop\CIS 3342\Term Project\4-29\3342DevStepFinal\Utilities\obj\Release\Utilities.pdb
